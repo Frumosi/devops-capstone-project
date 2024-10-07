@@ -61,7 +61,7 @@ def create_accounts():
 # LIST ALL ACCOUNTS
 ######################################################################
 
-@app.route("/accounts", methods=["GET"])
+# @app.route("/accounts", methods=["GET"])
 def list_accounts():
     """
     List all Accounts
@@ -74,6 +74,9 @@ def list_accounts():
 
     app.logger.info("Returning [%s] accounts", len(account_list))
     return jsonify(account_list), status.HTTP_200_OK
+
+
+
 ######################################################################
 # READ AN ACCOUNT
 ######################################################################
@@ -124,7 +127,7 @@ def delete_accounts(account_id):
 
     return "", status.HTTP_204_NO_CONTENT
 
-    
+
 ######################################################################
 #  U T I L I T Y   F U N C T I O N S
 ######################################################################
